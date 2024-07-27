@@ -1,0 +1,10 @@
+USE citizenConnect;
+
+GO
+CREATE OR ALTER PROCEDURE getVotes
+
+AS
+BEGIN 
+SELECT * FROM votes
+END;
+

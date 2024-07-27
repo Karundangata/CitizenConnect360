@@ -1,0 +1,39 @@
+#####################
+# add a new poll
+POST  http://localhost:4000/polls/add-poll
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwOTBjMzhjLWRlNTQtNDYzMS1iNDM1LTAzMTU2N2E0YzUxMCIsIm5hbWUiOiJrYXJ1bmRhbmdhdGEiLCJlbWFpbCI6ImthcnVuZGFuZ2F0YUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTgwOTUwOSwiZXhwIjoxNzIzNTM3NTA5fQ.O03qMPj-kha0BE-t2pXG3W1bfFhQlw2VCzYPAqnuNCg
+
+{
+    "userId": "e090c38c-de54-4631-b435-031567a4c510",
+    "title": "Should the Finance Bill be passed as a law?",
+    "choices": ["yes it will steer Kenya in the right direction", "no it should not see the light of day", "no it should be amended first", "uncertain as I haven't read it well"]
+}
+
+
+
+
+
+######################
+
+# get all polls in the db
+GET http://localhost:4000/polls
+
+
+######################
+# get a specific poll by id
+GET http://localhost:4000/989ae863-e4c4-4096-bd10-d76972634a33
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwOTBjMzhjLWRlNTQtNDYzMS1iNDM1LTAzMTU2N2E0YzUxMCIsIm5hbWUiOiJrYXJ1bmRhbmdhdGEiLCJlbWFpbCI6ImthcnVuZGFuZ2F0YUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTgwOTUwOSwiZXhwIjoxNzIzNTM3NTA5fQ.O03qMPj-kha0BE-t2pXG3W1bfFhQlw2VCzYPAqnuNCg
+
+
+#######################
+# close existing poll
+# change isOpen to 0
+PATCH http://localhost:4000/polls/close-poll/989ae863-e4c4-4096-bd10-d76972634a33
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwOTBjMzhjLWRlNTQtNDYzMS1iNDM1LTAzMTU2N2E0YzUxMCIsIm5hbWUiOiJrYXJ1bmRhbmdhdGEiLCJlbWFpbCI6ImthcnVuZGFuZ2F0YUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTgwOTUwOSwiZXhwIjoxNzIzNTM3NTA5fQ.O03qMPj-kha0BE-t2pXG3W1bfFhQlw2VCzYPAqnuNCg
+
+
+######################
+# delete a poll in the db
+DELETE http://localhost:4000/polls/989ae863-e4c4-4096-bd10-d76972634a33
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwOTBjMzhjLWRlNTQtNDYzMS1iNDM1LTAzMTU2N2E0YzUxMCIsIm5hbWUiOiJrYXJ1bmRhbmdhdGEiLCJlbWFpbCI6ImthcnVuZGFuZ2F0YUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTgwOTUwOSwiZXhwIjoxNzIzNTM3NTA5fQ.O03qMPj-kha0BE-t2pXG3W1bfFhQlw2VCzYPAqnuNCg

@@ -1,0 +1,58 @@
+#####################
+# register a new view
+POST  http://localhost:4000/views/add-view
+Content-Type: application/json
+
+{
+    "userId" : "4aad5877-0b05-4fbd-b8a3-e108831e909b",
+    "title" : "Rongai-Massace",
+    "description" : "Crying Blood!",
+    "body" : "Kenya has now taking a path of cononazation where kenya police shoots citizens recklessly and the cant face the law. the recent incient in Kithurai and Rongai is showing how brutal our police are and how the top offices are defending the law breakers",
+    "location" : "Rongai",
+    "imageUrl" : "https://cdn.pixabay.com/photo/2021/11/10/13/57/resignation-6784035_1280.png"
+}
+
+
+#########################
+# get all views in db
+GET http://localhost:4000/views
+
+
+#########################
+#view must have isDeleted=0 and isApproved=1
+# get all a view using a specific id
+GET http://localhost:4000/views/071f575f-b59d-4f1f-82aa-085512c4c50b
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+#####################
+#changes isModified to 1
+# update an existing view
+PATCH  http://localhost:4000/views/update-view/8002f705-d295-4e5d-b6bf-ff21239d0086
+Content-Type: application/json
+
+{
+    "userId" : "3739f68c-f5bf-4a78-ad8f-1367e66e3dc6",
+    "title" : "New Cabient",
+    "description" : "President William appoints a new board of Cs",
+    "body" : "Do you agree with the names the president gave out for the new cabinet secretaries thst he shooud propell thecountry forward with?",
+    "location" : "State-House",
+    "imageUrl" : "https://picha-zii"
+}
+
+
+#########################
+#changes isApproved=0
+# sensor a view using a specific id
+PATCH http://localhost:4000/views/sensor-view/a757cab2-67fe-4fb6-8f41-732cd40eb580
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+
+#########################
+# delete a view using a specific id
+DELETE http://localhost:4000/views/8002f705-d295-4e5d-b6bf-ff21239d0086
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+

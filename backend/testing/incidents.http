@@ -1,0 +1,44 @@
+#####################
+# add a new incident
+POST  http://localhost:4000/incidents/add-incident
+Content-Type: application/json
+
+{
+    "userId" : "8fdac51a-0182-4f1e-9afa-0d8f388a18ae",
+    "title" : "Avoid please  abductions",
+    "description" : "Kenya police abudaction Genz for demostrating that is against the law",
+    "body" : "What Kenya young people are going in the hands of the police is not constitutionally right and should be condemned by all means since everyone has the right  for expression  and that should stop, we have freedom we are not salves for our nation. ",
+    "location" : "Kamahoha-Nai",
+    "imageUrl" : "https://cdn.pixabay.com/photo/2016/03/31/14/59/african-american-1292905_640.png"
+}
+
+
+#########################
+# get all incidents in db
+GET http://localhost:4000/incidents
+
+
+#########################
+# get an incident using a specific id
+#incident must have isDeleted=0 and isApproved=1
+GET http://localhost:4000/incidents/a744a103-c2a5-411d-9775-b1c2cdcc9177
+
+
+
+#########################
+#changes isApproved=0
+# sensor a view using a specific id
+PATCH http://localhost:4000/incidents/sensor-incident/8c85c06a-8fbb-4553-9dc9-4f6b19a882c4
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+#########################
+#changes isApproved=0
+# sensor a view using a specific id
+DELETE http://localhost:4000/incidents/a9977993-79c9-4da6-bf7e-eed17e8a6c79
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+
+
+

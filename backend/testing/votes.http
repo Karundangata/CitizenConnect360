@@ -1,0 +1,55 @@
+#####################
+# register a new user
+POST  http://localhost:4000/votes/add-vote
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+{
+    "userId": "cf0ed8e5-c96b-4b52-b7d9-02b3aa253e95",
+    "pollId": "a5127545-c679-4a96-88b4-06fc3a6c634b",
+    "choiceMade": "yes"
+}
+
+
+######################
+# get all votes in the db
+GET http://localhost:4000/votes
+
+
+######################
+# get votes tied to a specific poll via its id
+GET http://localhost:4000/votes/400cae9d-5e52-4f4b-b6ee-61f27d4bacde
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+#######################
+# update an existing poll
+PATCH http://localhost:4000/votes/update-vote/01299bbc-2878-4b45-98ee-951af74eaead
+Content-Type: application/json
+
+{
+    "choiceMade": "we will leave with our own means"
+}
+
+######################
+# delete a poll in the db
+DELETE http://localhost:4000/votes/01299bbc-2878-4b45-98ee-951af74eaead
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxYmFhMDA0LWI1Y2YtNDVlOS05NzNlLTQzOTNiOGY3MGIzMyIsIm5hbWUiOiJibHVlIiwiZW1haWwiOiJuYWthbXVyYUBnbWFpbC5jb20iLCJyb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTMxODQ5OCwiZXhwIjoxNzIzMDQ2NDk4fQ.0tSHhg4BABqH0fzApRZB95BAzKoU0E6N1L3ZiVvWOzo
+
+
+
+#######################
+# get inclusive 
+
+
+#######################
+# 
+
+
+#######################
+# 
+
+
+#######################
+# 
+
